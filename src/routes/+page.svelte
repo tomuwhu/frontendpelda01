@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    const lr = Array(10).fill(0)
+    const lc = Array(12).fill(0)
+</script>
+<table>
+    {#each lr as row, i}
+        <tr>
+            
+        </tr>
+    {/each}
+</table>
