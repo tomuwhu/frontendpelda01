@@ -9,9 +9,9 @@
         <tr>
             {#each lc as _, j}
                 <td on:click={(e)=>{
-                    lr[i]++
-                    lc[j]++
-                    arr[i][j] = 'h'
+                    arr[i][j] ? lr[i]-- : lr[i]++
+                    arr[i][j] ? lc[j]-- : lc[j]++
+                    arr[i][j] = arr[i][j] ? '' : 'h'
                 }} class={arr[i][j]}>{i},{j}</td>
             {/each}
             <td class="ro {r?'':'null'}">{r}</td>
