@@ -1,8 +1,6 @@
 <script>
   const n = 10, m = 12
-  var lr = Array(n).fill(0)
-  var lc = Array(m).fill(0)
-  var arr = {}
+  var [lr, lc, arr] = [Array(n).fill(0), Array(m).fill(0), {}]
 </script>
 <table>
   {#each lr as r, i}
