@@ -2,19 +2,19 @@
   const n = 10, m = 12
   var lr = Array(n).fill(0)
   var lc = Array(m).fill(0)
-  var arr = Array(n).fill(0).map(v => Array(m))
+  var arr = {}
 </script>
 <table>
   {#each lr as r, i}
     <tr>
       {#each lc as _, j}
         <td on:click={(e) => {
-          if (arr[i][j]) {
-            lr[i]--, lc[j]--, arr[i][j] = ''
+          if (arr[`${i}-${j}`]) {
+            lr[i]--, lc[j]--, arr[`${i}-${j}`] = ''
           } else {
-            lr[i]++, lc[j]++, arr[i][j] = 'h'
+            lr[i]++, lc[j]++, arr[`${i}-${j}`] = 'h'
           }
-        }} class={arr[i][j]}>{i},{j}</td>
+        }} class={arr[`${i}-${j}`]}></td>
       {/each}
       <td class="ro {r?'':'null'}">{r}</td>
     </tr>
