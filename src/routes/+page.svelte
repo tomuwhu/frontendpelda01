@@ -7,11 +7,10 @@
     <tr>
       {#each lc as _, j}
         <td on:click={(e) => {
-          if (arr[`${i}-${j}`]) {
+          if (arr[`${i}-${j}`])
             lr[i]--, lc[j]--, arr[`${i}-${j}`] = ''
-          } else {
+          else
             lr[i]++, lc[j]++, arr[`${i}-${j}`] = 'h'
-          }
         }} class={arr[`${i}-${j}`]}></td>
       {/each}
       <td class="ro {r?'':'null'}">{r}</td>
